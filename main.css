@@ -1,13 +1,73 @@
+:root {
+    --primary-color: darksalmon;
+    --secondary-color: blue;
+    
+}
+
+body {
+  background-color: darksalmon;
+  color: var(--secondary-color);
+}
+
+h2 {
+  text-align: center;
+  color: crimson;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+}
 
 
+input, label {
+    display: block;
+}
+input {
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: larger;
+}
+label {
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  margin-bottom: 0.5rem;
+}
+
+button {
+    display: block;
+    margin-top: 0.5rem;
+    margin: auto;
+    background: transparent;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 0.2rem;
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+#output {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: darkred;
+  font-weight: bolder;
+  font-size: xx-large;
+  background-color: lightskyblue;
+  display: flexbox;
+}
 
 .imgHappy {
     width: 100%;
     height: 200px;
     display: none;
+    margin-top: 2rem;
 }
 .imgSad {
     width: auto;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
     display: none;
@@ -16,13 +76,16 @@
 
 .footer a {
     text-decoration: none;
-    display: inline-block;
-    padding: 1rem;
-    font-size: 1.1rem;
+    display: block;
+    padding: 1.2rem;
+    font-size: 1.4rem;
     color: black;
   }
   
   footer {
+    position: fixed;
+    bottom: 0.3rem;
+    width: 99%;
     box-shadow: 0px 0px 10px 2px var(--secondary-color);
     padding: 0 0 1rem;
   }
@@ -35,3 +98,12 @@
     margin-block-start: 0;
     margin-block-end: 0;
   }
+
+  .legacy {
+    
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+  }
+
+  
