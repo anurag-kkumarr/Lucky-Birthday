@@ -4,6 +4,12 @@ const checkBtn = document.querySelector("#check")
 const divOutput = document.querySelector("#output")
 const happy =document.querySelector(".imgHappy")
 const sad = document.querySelector(".imgSad")
+const privacyDiv = document.querySelector(".privacy");
+const crossBtn = document.querySelector("#cross-btn");
+
+crossBtn.addEventListener('click', ()=>{
+    privacyDiv.style.display = "none";
+})
 
 //console.log(birthDate)
 //console.log(luckyNo)

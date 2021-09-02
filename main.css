@@ -18,6 +18,21 @@ h2 {
   width: 50%;
   margin: auto;
 }
+.privacy {
+  display: flex;
+  background-color: blue;
+  color: white;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  font-size: larger;
+}
+#cross-btn {
+  position: absolute;
+  right: 25.5%;
+  top: 9%;
+  font-weight: lighter;
+  border: none;
+}
 
 
 input, label {
@@ -56,18 +71,25 @@ button {
   font-weight: bolder;
   font-size: xx-large;
   background-color: lightskyblue;
-  display: flexbox;
+  
+}
+.image {
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .imgHappy {
-    width: 100%;
-    height: 200px;
+    width: 80%;
+    height: 150px;
     display: none;
-    margin-top: 2rem;
+    position: absolute;
+    right: 40px;
+    overflow: scroll;
+    
 }
 .imgSad {
     width: auto;
-    height: 150px;
+    height: 120px;
     margin-left: auto;
     margin-right: auto;
     display: none;
@@ -84,11 +106,11 @@ button {
   }
   
   footer {
-    position: fixed;
+    position: absolute;
     bottom: 0.3rem;
     width: 99%;
-    box-shadow: 0px 0px 10px 2px var(--secondary-color);
-    padding: 0 0 1rem;
+    box-shadow: 0px 0px 5px 2px var(--secondary-color);
+    padding: 0 0 0.5rem;
   }
   ul {
     list-style: none;
