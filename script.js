@@ -11,40 +11,41 @@ crossBtn.addEventListener('click', ()=>{
     privacyDiv.style.display = "none";
 })
 
-//console.log(birthDate)
-//console.log(luckyNo)
-//console.log(checkBtn)
-
 
 let birthDateSum =0;
 checkBtn.addEventListener("click", ()=>{
-    console.log("clicked")
-    //console.log(birthDate.value)
-   // console.log(typeof(birthDate.value))
-    const birthDateStr = (birthDate.value).replace(/[^\w\s]/gi, '');
-    let birthDateNum = Number(birthDateStr);
-    birthDateSum = 0;
+    const luckyNum = Number(luckyNo.value);
 
-    while(birthDateNum!=0){
-        birthDateSum += birthDateNum % 10;
-        birthDateNum = Math.trunc(birthDateNum / 10);
-    }
-    const luckyNum = Number(luckyNo.value)
-    const luckySum = birthDateSum + luckyNum;
-   // console.log(luckySum)
-   // console.log(Number(luckyNum))
-
-    if(luckySum % luckyNum === 0){
-        divOutput.innerText = "Hurray!!You are a lucky person!";
-        sad.style.display = "none";
-        happy.style.display = "block";
+    if(birthDate.value === "" ||luckyNo.value ==="" ){
+        divOutput.innerText = "Fill the boxes to proceed";
         
     }
+    else if(luckyNum>0){
+        const birthDateStr = (birthDate.value).replace(/[^\w\s]/gi, '');
+        let birthDateNum = Number(birthDateStr);
+        birthDateSum = 0;
+
+        while(birthDateNum!=0){
+            birthDateSum += birthDateNum % 10;
+            birthDateNum = Math.trunc(birthDateNum / 10);
+        }
+        
+        const luckySum = birthDateSum + luckyNum;
+
+        if(luckySum % luckyNum === 0){
+            divOutput.innerText = "Hurray!!You are a lucky person!";
+            sad.style.display = "none";
+            happy.style.display = "block";
+            
+        }
+        else {
+            divOutput.innerText = "Oops!!Your birthday is not a lucky number!";
+            happy.style.display = "none";
+            sad.style.display = "block";
+        }
+    }
     else {
-        divOutput.innerText = "Oops!!Your birthday is not a lucky number!";
-        happy.style.display = "none";
-        sad.style.display = "block";
+        divOutput.innerText = "Enter positive number for result";
     }
 
-}
-)
+})
